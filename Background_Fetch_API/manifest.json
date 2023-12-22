@@ -1,0 +1,30 @@
+{
+  "name": "BackgroundFetch",
+  "short_name": "BackgroundFetch",
+  "scope": "/",
+  "icons": [{
+    "src": "podcast_mic.jpg",
+    "sizes": "512x512",
+    "purpose": "maskable",
+    "type": "image/jpeg"
+  }, {
+    "src": "podcast_mic.jpg",
+    "sizes": "192x192",
+    "purpose": "maskable",
+    "type": "image/jpeg"
+  }, {
+    "src": "podcast_mic.jpg",
+    "sizes": "512x512",
+    "purpose": "maskable",
+    "type": "image/png"
+  }, {
+    "src": "podcast_mic.jpg",
+    "sizes": "192x192",
+    "purpose": "maskable",
+    "type": "image/png"
+  }],
+  "background_color": "#fff",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#c8b0a6"
+}

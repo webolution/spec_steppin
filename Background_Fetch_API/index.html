@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Background Fetch API Podcast</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script crossorigin type="module" src="background.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1><img
+                    src="podcast_mic.jpg"
+                    alt="Background Fetch Podcast"></h1>
+        </header>
+        <!-- Progress bar -->
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <!-- Button to check progress -->
+        <button type="button" id="check-progress-button">Check Progress</button>
+    </div>
+</body>
+
+</html>
