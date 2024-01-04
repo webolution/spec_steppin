@@ -1,0 +1,34 @@
+ @counter-style custom-counter {
+     system: decimal;
+     symbols: "*" "* " "* ";
+     additive-symbols: "†" "‡" "† ";
+     fallback: decimal;
+ }
+
+ body {
+     counter-reset: my-counter;
+ }
+
+ h1::before {
+     counter-increment: my-counter;
+     content: counter(my-counter) ". ";
+ }
+
+ h2::before {
+     counter-increment: my-counter;
+     content: counter(my-counter) ". ";
+ }
+
+ h3::before {
+     counter-increment: my-counter;
+     content: counter(my-counter) ". ";
+ }
+
+ .custom-list {
+     counter-reset: custom-counter;
+ }
+
+ .custom-list li::before {
+     counter-increment: custom-counter;
+     content: counter(custom-counter) " ";
+ }
