@@ -3,10 +3,10 @@ if ('BarcodeDetector' in window) {
 	const barcodeDetector = new BarcodeDetector();
 
 	// Create an Image object
-	var image = new Image();
+	let image = new Image();
 	image.src = 'image.png'; // Set the src to the path of your image file
 
-	image.onload = function () {
+	image.onload = () => {
 		barcodeDetector
 			.detect(image)
 			.then((barcodes) => {
