@@ -1,0 +1,6 @@
+.element-with-checkerboard {
+    width: 190px;
+    height: 190px;
+    --checkerboard-spacing: 10px;
+    background-image: paint(checkerboard);
+}

@@ -1,7 +1,7 @@
 // Check if the Beacon API is supported by the browser
 if (navigator && navigator.sendBeacon) {
 	// Create a data object to send with the beacon request
-	var data = {
+	let data = {
 		userId: 123,
 		event: 'click',
 		timestamp: Date.now()
