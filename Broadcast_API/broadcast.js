@@ -5,15 +5,19 @@ const channel = new BroadcastChannel('channel');
 // Set up an event listener for messages received on the channel
 channel.onmessage = (event) => {
 	// Get the div where we will display the messages
-	const messageDiv = document.getElementById('messageDiv');
+	const messageDiv = document.querySelector('#messageDiv');
 	// Append the received message to the div, followed by a line break
-	messageDiv.innerHTML += event.data + '<br>';
+	let textNode = document.createTextNode(event.data);
+	let breakNode = document.createElement('br');
+
+	messageDiv.appendChild(textNode);
+	messageDiv.appendChild(breakNode);
 };
 
 // Get the 'send' button and set up a click event listener
-document.getElementById('send').addEventListener('click', () => {
+document.querySelector('#send').addEventListener('click', () => {
 	// Get the input textarea where the user types their message
-	const input = document.getElementById('input');
+	const input = document.querySelector('#input');
 	// Get the message from the textarea
 	const message = input.value;
 	// Send the message on the channel
