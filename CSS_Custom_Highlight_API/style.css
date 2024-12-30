@@ -1,5 +1,5 @@
 /* Define a custom highlight style */
-::selection {
-    background-color: yellow;
-    color: black;
+::highlight(search-results) {
+    background-color: #f06;
+    color: white;
 }
