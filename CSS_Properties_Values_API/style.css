@@ -1,0 +1,11 @@
+@property --my-color {
+    syntax: '<color>';
+    initial-value: #333333;
+    inherits: false;
+}
+
+.element-with-custom-property {
+    width: 100px;
+    height: 100px;
+    background-color: var(--my-color);
+}
