@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Typed OM API Demo</title>
+    <title>CSSOM API Demo</title>
+    <!-- Link to the external stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <script src="cssTypedObjectModel.js" defer></script>
+    <script src="cssObjectModel.js" defer></script>
 </head>
+
 <body>
-    <h1>CSS Typed OM API Demo</h1>
-    <p>Open the browser console to see the typed CSS objects. Click the button to change the box's properties.</p>
-    
-    <div class="box"></div>
-    <br>
-    <button id="changeBtn">Animate Box</button>
+    <h1>CSS Object Model (CSSOM) Demo</h1>
+    <p>This demo uses JavaScript to interact with the stylesheet. Click the button to change the color and width of the
+        box by modifying the CSS rule directly through the CSSOM.</p>
+
+    <!-- This is the element we will style and modify -->
+    <div class="box">I am a box.</div>
+
+    <!-- This button will trigger the JavaScript function -->
+    <button id="style-changer-btn">Change Style via CSSOM</button>
+
+    <!-- We will log output here to show what's happening -->
+    <h2>Log:</h2>
+    <pre id="output"></pre>
 </body>
+
 </html>

@@ -1,18 +1,39 @@
-/* Basic body styling for clarity */
+/* General styling for the page */
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
     padding: 2em;
     line-height: 1.6;
 }
 
-/* The box we will be manipulating with the Typed OM API */
+/* 
+  This is the rule we will target with the CSSOM.
+  It defines the initial appearance of our box.
+*/
 .box {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-color: steelblue;
-    opacity: 0.5;
-    /* We add transitions to make the changes visually smooth for the demo */
-    transition: width 0.5s ease-in-out, 
-                opacity 0.5s ease-in-out,
-                transform 0.5s ease-in-out;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: 20px 0;
+    /* Adding a transition to make the style changes smooth */
+    transition: background-color 0.5s, width 0.5s;
+}
+
+/* Basic styling for the button and output area */
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    /* Ensures long lines wrap */
 }
