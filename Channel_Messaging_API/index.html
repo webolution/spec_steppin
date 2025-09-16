@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Messaging API Demo</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="channelMessagingAPI.js" defer></script>
+</head>
+
+<body>
+    <h1>Main Page</h1>
+    <p>Messages from iframe will appear below:</p>
+    <div id="message-display"></div>
+    
+    <div class="input-group">
+        <input type="text" id="message-input" placeholder="Type a message to the iframe">
+        <button id="send-message-btn">Send Message</button>
+    </div>
+    
+    <hr>
+    <h2>Iframe Content:</h2>
+    <iframe src="iframe.html" id="my-iframe" width="100%" height="300" title="Embedded content for receiving and sending messages"></iframe>
+</body>
+
+</html>
