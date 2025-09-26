@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard API Demo</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="clipboardAPI.js" defer></script>
+</head>
+
+<body>
+    <h1>Clipboard API Demo</h1>
+    
+    <div class="demo-section">
+        <h2>Writing to the Clipboard</h2>
+        <p id="text-to-copy">This is the text that will be copied to your clipboard when you click the button.</p>
+        <button id="copy-btn">Copy Text</button>
+    </div>
+    
+    <div class="demo-section">
+        <h2>Reading from the Clipboard</h2>
+        <p>Click the button below to paste content from your clipboard into the text area.</p>
+        <textarea id="paste-area" placeholder="Pasted content will appear here..."></textarea>
+        <button id="paste-btn">Paste Text</button>
+    </div>
+    
+    <p class="status">Status: <span id="status-message">Ready</span></p>
+</body>
+
+</html>
