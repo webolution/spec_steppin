@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compression Stream API Demo</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="compressionStreamAPI.js" defer></script>
+</head>
+
+<body>
+    <h1>Compression Streams API Demo</h1>
+    <p id="support"></p>
+    
+    <h2>1) Compress/Decompress Text</h2>
+    <label>
+        Algorithm:
+        <select id="algo">
+            <option value="gzip" selected>gzip</option>
+            <option value="deflate">deflate</option>
+        </select>
+    </label>
+    <textarea id="textInput" rows="5" class="full-width" placeholder="Type or paste some text here..."></textarea>
+    <button id="btnCompressText">Compress Text</button>
+    <button id="btnDecompressText">Decompress Text</button>
+    <div id="textResult" class="pre-box"></div>
+    
+    <h2>2) Compress/Decompress Files (Streaming)</h2>
+    <div class="grid-gap">
+        <div>
+            <label>Pick a file to compress: <input type="file" id="fileToCompress"></label>
+            <button id="btnCompressFile" disabled>Compress File</button>
+            <div id="fileCompressResult"></div>
+        </div>
+        <div>
+            <label>Pick a .gz or deflated file to decompress: <input type="file" id="fileToDecompress"></label>
+            <button id="btnDecompressFile" disabled>Decompress File</button>
+            <div id="fileDecompressResult"></div>
+        </div>
+    </div>
+
+    <h2>3) Streaming Decompress from Fetch</h2>
+    <p class="my-025">Enter a URL to a gzip-compressed text file (e.g., a URL to a .gz file)</p>
+    <input id="fetchUrl" type="url" class="full-width" placeholder="Enter URL here...">
+    <div class="mt-05">
+        <button id="btnFetchDecompress">Fetch and Decompress</button>
+        <pre id="fetchResult" class="pre-box"></pre>
+    </div>
+</body>
+
+</html>
