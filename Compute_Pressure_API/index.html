@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compute Pressure API Demo</title>
+
+    <!-- Minimal styling for the demo UI -->
+    <link rel="stylesheet" href="styles.css" />
+
+        <script src="computePressureApi.js" defer></script>
+
+    <!-- Important: The Compute Pressure API is experimental and requires HTTPS. -->
+    <!-- Reference: https://developer.mozilla.org/en-US/docs/Web/API/Compute_Pressure_API -->
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Compute Pressure API Demo</h1>
+            <p class="subtle">
+                Experimental API. Requires HTTPS. See MDN:
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Compute_Pressure_API" target="_blank"
+                    rel="noreferrer noopener">
+                    Compute Pressure API
+                </a>
+            </p>
+        </header>
+
+        <!-- Support and environment status -->
+        <section class="card">
+            <h2>Environment & Support</h2>
+            <ul class="status-list">
+                <li>
+                    Secure context (HTTPS):
+                    <strong id="secureStatus">checking…</strong>
+                </li>
+                <li>
+                    PressureObserver available:
+                    <strong id="poStatus">checking…</strong>
+                </li>
+                <li>
+                    Supported sources:
+                    <strong id="sources">checking…</strong>
+                </li>
+                <li>
+                    Current observation:
+                    <strong id="obsStatus">stopped</strong>
+                </li>
+            </ul>
+            <p class="note" id="supportNote"></p>
+        </section>
+
+        <!-- Controls to start/stop observing and a visual indicator for state -->
+        <section class="card">
+            <h2>Observer Controls</h2>
+            <div class="row">
+                <label for="sourceSel">
+                    Source:
+                    <!-- The API commonly supports 'cpu' (we’ll query dynamically) -->
+                    <select id="sourceSel"></select>
+                </label>
+
+                <button id="btnStart" class="btn primary">Start observing</button>
+                <button id="btnStop" class="btn" disabled>Stop observing</button>
+            </div>
+
+            <!-- Current state indicator with color coding -->
+            <div class="state">
+                <div class="state-indicator" id="stateDot" title="No data"></div>
+                <div>
+                    <div>Latest state: <strong id="stateText">—</strong></div>
+                    <div class="muted" id="stateMeta">time: —</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optional CPU stress tool to help provoke state changes (if supported) -->
+        <section class="card">
+            <h2>CPU Stress Tool (optional)</h2>
+            <p class="muted">
+                Starts a Web Worker that performs CPU-intensive work to increase system pressure.
+                Use carefully and stop when done.
+            </p>
+            <div class="row">
+                <label for="intensity">
+                    Intensity:
+                    <input id="intensity" type="range" min="0" max="100" value="50" />
+                    <span id="intensityVal">50%</span>
+                </label>
+                <button id="btnStressStart" class="btn">Start stress</button>
+                <button id="btnStressStop" class="btn" disabled>Stop stress</button>
+            </div>
+        </section>
+
+        <!-- Log of PressureRecord changes -->
+        <section class="card">
+            <h2>Change Log</h2>
+            <div id="log" class="log" aria-live="polite"></div>
+        </section>
+    </main>
+</body>
+
+</html>
