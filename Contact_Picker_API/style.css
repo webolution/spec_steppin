@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    margin: 2em;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 1em;
+    border-radius: 5px;
+}
