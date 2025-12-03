@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Memory API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="deviceMemoryAPI.js" defer></script>
+</head>
+
+<body>
+    <h1>Device Memory API — Quick demo</h1>
+    
+    <div class="card">
+        <div id="info">
+            <div class="status" id="device-memory">Device memory: <em>detecting…</em></div>
+            <div id="tier">Quality tier: <em>—</em></div>
+            <div class="note" id="compat-note"></div>
+    
+            <!-- demo image — we'll swap a lower/higher-quality source based on memory -->
+            <img id="hero" class="demo" src="" alt="Demo image (quality tuned by Device Memory API)" />
+    
+            <button id="refresh">Re-check device memory</button>
+            <div class="note">This demo reads navigator.deviceMemory (approx. GB) and picks a content-quality tier. Must run
+                on HTTPS or localhost.</div>
+        </div>
+    </div>
+</body>
+
+</html>
