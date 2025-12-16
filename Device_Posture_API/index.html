@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Orientation API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="devicePostureAPI.js" defer></script>
+</head>
+    
+<body>
+    <main>
+        <h1>Device Posture API Demo</h1>
+        <p>This demo shows how to detect and respond to device posture changes.</p>
+
+        <div id="status-container">
+            <p><strong>API Support:</strong> <span id="api-support">Checking...</span></p>
+            <p><strong>Current Posture:</strong> <span id="current-posture">N/A</span></p>
+        </div>
+
+        <div id="log-container">
+            <h2>Posture Change Log</h2>
+            <ul id="posture-log">
+                <!-- Log entries will be added here by JavaScript -->
+            </ul>
+        </div>
+
+        <p class="notes">
+            Notes: This API is experimental and primarily for foldable devices.
+            Browser developer tools typically only report 'continuous' posture.
+            For full functionality, test on a physical foldable device.
+            This feature is available only in secure contexts (HTTPS).
+        </p>
+    </main>
+</body>
+
+</html>

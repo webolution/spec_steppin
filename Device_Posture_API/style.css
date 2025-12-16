@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #0056b3;
+    margin-top: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#status-container p,
+.notes {
+    background-color: #e9f7ef;
+    border-left: 5px solid #28a745;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+#status-container p strong {
+    color: #007bff;
+}
+
+#current-posture {
+    font-weight: bold;
+    color: #dc3545;
+    /* Default to a warning color, will change based on posture */
+}
+
+#posture-log {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fafafa;
+    border-radius: 4px;
+}
+
+#posture-log li {
+    padding: 8px 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+#posture-log li:last-child {
+    border-bottom: none;
+}
+
+/* Styles for specific postures (optional, for visual feedback) */
+body.posture-continuous #current-posture {
+    color: #28a745;
+    /* Green for continuous */
+}
+
+body.posture-folded #current-posture {
+    color: #ffc107;
+    /* Orange for folded */
+}
