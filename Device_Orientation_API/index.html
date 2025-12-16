@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Orientation API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="deviceOrientationAPI.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Device Orientation Events — Demo</h1>
+    
+        <!-- On iOS Safari we must ask the user for permission via a user gesture -->
+        <div id="controls">
+            <button id="requestPermissionBtn" class="hidden">Enable motion (iOS)</button>
+            <button id="startBtn">Start</button>
+            <button id="stopBtn" disabled>Stop</button>
+        </div>
+    
+        <!-- Visual: a 3D box that tilts/rotates with the device -->
+        <div id="stage">
+            <div id="box">
+                <div class="face front">Front</div>
+                <div class="face back">Back</div>
+            </div>
+        </div>
+
+        <!-- Numeric readout of alpha/beta/gamma -->
+        <div id="readout">
+            <div>alpha (compass): <span id="alpha">—</span>°</div>
+            <div>beta (front/back tilt): <span id="beta">—</span>°</div>
+            <div>gamma (left/right tilt): <span id="gamma">—</span>°</div>
+            <div>event type: <span id="etype">—</span></div>
+        </div>
+
+        <p class="notes">
+            Notes: must test on a mobile device with sensors. Page must be served over HTTPS for most browsers.
+        </p>
+    </main>
+</body>
+
+</html>
