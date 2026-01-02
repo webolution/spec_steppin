@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1,
+h2 {
+    color: #0056b3;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Styling for the custom editable area */
+#editable-area {
+    border: 2px solid #a0a0a0;
+    /* Default border */
+    min-height: 100px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: text;
+    /* Indicate it's a text input area */
+    /* Crucial: remove default outline, EditContext handles focus visually */
+    outline: none;
+    /* Make it focusable programmatically and via tabindex */
+    tabindex: 0;
+    white-space: pre-wrap;
+    /* Preserve whitespace and allow wrapping */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Highlight when the editable area is focused */
+#editable-area:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4);
+}
+
+/* Styling for the debug output section */
+.debug-output {
+    background-color: #e9e9e9;
+    padding: 15px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    /* Preserve whitespace in output */
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.debug-output strong {
+    color: #222;
+}

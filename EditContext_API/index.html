@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Orientation API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="editContextAPI.js" defer></script>
+</head>
+    
+<body>
+     <h1>EditContext API Demonstration</h1>
+    <p>
+        Welcome to a demo of the experimental <a href="https://developer.mozilla.org/en-US/docs/Web/API/EditContext_API" target="_blank" rel="noopener noreferrer">EditContext API</a>.
+        This API empowers web developers to build custom rich text editors by providing fine-grained control
+        over text input, selection, and rendering, especially useful for elements like <code>&lt;canvas&gt;</code>.
+    </p>
+    <p>
+        <strong>Note:</strong> The EditContext API is an experimental technology and might not be supported in all browsers
+        without enabling experimental web platform features. This demo includes a basic support check.
+    </p>
+    <p>
+        Try typing in the "Editable Area" below, selecting text, or using system-level input methods (like IME
+        for East Asian languages, if configured on your system). Observe how the "Debug Output" reflects the internal
+        state changes.
+    </p>
+
+    <h2>Editable Area</h2>
+    <!--
+        This div will serve as our custom editable region.
+        It has a tabindex="0" to make it focusable by default.
+        We will attach an EditContext instance to it in JavaScript.
+    -->
+    <div id="editable-area" tabindex="0"></div>
+
+    <h2>Debug Output</h2>
+    <!-- This section will display the current internal state managed by EditContext -->
+    <div class="debug-output">
+        <p><strong>Current Text:</strong> <span id="current-text"></span></p>
+        <p><strong>Selection Start Index:</strong> <span id="selection-start"></span></p>
+        <p><strong>Selection End Index:</strong> <span id="selection-end"></span></p>
+        <p><em>(Console will show additional event details)</em></p>
+    </div>
+</body>
+
+</html>
