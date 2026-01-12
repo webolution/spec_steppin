@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EME API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="encryptedMediaExtensionsAPI.js" defer></script>
+</head>
+    
+<body>
+    <div class="container">
+        <h1>Encrypted Media Extensions (EME) Demo</h1>
+        <p>This demo illustrates the basic workflow of the EME API using a simulated encrypted video and license server for
+            the Clear Key system.</p>
+    
+        <video id="myVideo" controls autoplay muted width="640" height="360"></video>
+    
+        <div id="status" class="status-message">Waiting for user interaction...</div>
+    
+        <button id="startButton">Start EME Process & Load Video</button>
+        <button id="clearLogButton">Clear Log</button>
+    
+        <h2>Console Log</h2>
+        <pre id="log" class="log-area"></pre>
+    </div>
+
+</body>
+
+</html>
