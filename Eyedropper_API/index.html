@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyedropper API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="eyedropperAPI.js" defer></script>
+</head>
+    
+<body>
+    <div class="container">
+        <h1>EyeDropper API Demo</h1>
+        <p>Click the button to pick a color from anywhere on your screen!</p>
+    
+        <!-- Button to trigger the EyeDropper -->
+        <button id="pickColorBtn">Pick a Color</button>
+    
+        <!-- Area to display the selected color and its hex value -->
+        <div class="result-area">
+            <h2>Selected Color:</h2>
+            <div id="colorSwatch" class="color-swatch"></div>
+            <p>Hex Value: <span id="hexValue">N/A</span></p>
+        </div>
+    
+        <p class="compatibility-note">
+            Note: This API is experimental and works primarily in Chromium-based browsers (Chrome, Edge, Opera) over HTTPS.
+        </p>
+    </div>
+
+</body>
+
+</html>
