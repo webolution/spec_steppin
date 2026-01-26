@@ -1,0 +1,72 @@
+body {
+    font-family: sans-serif;
+    margin: 2em;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#status,
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    white-space: pre-wrap;
+    /* Preserve whitespace and line breaks */
+    word-break: break-all;
+    /* Break long words */
+}
+.success {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.info {
+    background-color: #e2e3e5;
+    border-color: #6c757d;
+    color: #383d41;
+}
+
+.warning {
+    background-color: #fff3cd;
+    border-color: #ffc107;
+    color: #856404;
+}
