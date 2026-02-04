@@ -1,0 +1,12 @@
+body {
+    font-family: sans-serif;
+    margin: 2em;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#logs {
+    background: #f4f4f4;
+    padding: 10px;
+    margin-top: 20px;
+}
