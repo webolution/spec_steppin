@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document PiP API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="documentPictureInPictureAPI.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Context -->
+    <h1>Document Picture-in-Picture</h1>
+    <p>Click "Toggle PiP" to move the timer to an always-on-top window.</p>
+    
+    <!-- The Container we will move between windows -->
+    <div id="player-wrapper">
+        <div id="pip-content" class="pip-container">
+            <h3>Focus Timer</h3>
+            <div class="timer-display" id="timer">00:00</div>
+            <div class="controls">
+                <button id="toggle-pip-btn" class="btn-primary">Toggle PiP</button>
+                <button id="reset-btn" class="btn-secondary">Reset</button>
+            </div>
+            <div style="margin-top: 10px; font-size: 0.8rem; color: #888;">
+                Runs in background
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

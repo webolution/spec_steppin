@@ -1,0 +1,91 @@
+/* Base styles for the page layout */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+ /* 
+           Styles for the specific component we want to move into PiP.
+           NOTE: These styles must be manually copied to the PiP window context 
+           via JavaScript, or the content will look unstyled in the popup.
+        */
+ .pip-container {
+     background: white;
+     border: 1px solid #ddd;
+     border-radius: 12px;
+     padding: 20px;
+     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+     width: 300px;
+     text-align: center;
+     transition: all 0.3s ease;
+ }
+
+ .timer-display {
+     font-size: 3rem;
+     font-weight: 700;
+     font-variant-numeric: tabular-nums;
+     color: #2563eb;
+     margin: 10px 0;
+ }
+
+ .controls {
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+ }
+
+ button {
+     cursor: pointer;
+     padding: 8px 16px;
+     border-radius: 6px;
+     border: none;
+     font-weight: 600;
+     transition: background 0.2s;
+ }
+
+ .btn-primary {
+     background-color: #2563eb;
+     color: white;
+ }
+
+ .btn-primary:hover {
+     background-color: #1d4ed8;
+ }
+
+ .btn-secondary {
+     background-color: #e5e7eb;
+     color: #374151;
+ }
+
+ .btn-secondary:hover {
+     background-color: #d1d5db;
+ }
+
+ /* Visual indicator when content is active in PiP */
+ .pip-active-placeholder {
+     border: 2px dashed #ccc;
+     border-radius: 12px;
+     width: 300px;
+     height: 200px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #888;
+     background: rgba(0, 0, 0, 0.05);
+ }
