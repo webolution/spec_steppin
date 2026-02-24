@@ -1,0 +1,87 @@
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --card-bg: #2d2d2d;
+    --primary: #4caf50;
+    --secondary: #2196f3;
+    --danger: #f44336;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    opacity: 0.8;
+    margin-top: 0;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.primary {
+    background-color: var(--primary);
+}
+
+.danger {
+    background-color: var(--danger);
+}
+
+.secondary {
+    background-color: var(--secondary);
+}
+
+.output-area {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+pre {
+    background: #000;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #a5d6a7;
+    white-space: pre-wrap;
+}
