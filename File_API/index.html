@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="file_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="container">
+        <header>
+            <h1>File API Overview</h1>
+            <p>Select a file or drag-and-drop to inspect metadata and read content.</p>
+        </header>
+    
+        <!-- Method 1: Standard Input -->
+        <div class="control-group">
+            <label for="file-input" class="btn primary">Choose File(s)</label>
+            <input type="file" id="file-input" multiple hidden>
+            <span id="file-count">No files chosen</span>
+        </div>
+    
+        <!-- Method 2: Drag and Drop Zone -->
+        <div id="drop-zone" class="drop-zone">
+            <p>📂 Drag & Drop files here</p>
+        </div>
+    
+        <!-- Output Log -->
+        <section class="output-area">
+            <h3>File Details & Content:</h3>
+            <pre id="output">Waiting for interaction...</pre>
+            <div id="preview-container"></div>
+        </section>
+    </div>
+</body>
+
+</html>
