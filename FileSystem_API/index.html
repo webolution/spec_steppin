@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File System API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="fileSystem_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="container">
+        <header>
+            <h1>Local File Editor</h1>
+            <p class="status" id="statusMsg">Ready to open a file...</p>
+        </header>
+    
+        <div class="toolbar">
+            <button id="btnOpen">Open File</button>
+            <button id="btnSave" disabled>Save</button>
+            <button id="btnSaveAs">Save As...</button>
+        </div>
+    
+        <textarea id="textEditor" placeholder="Open a text file to start editing..."></textarea>
+    </div>
+</body>
+
+</html>
