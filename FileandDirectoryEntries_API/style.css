@@ -1,0 +1,35 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Visual styling for the drop target */
+#drop-zone {
+    border: 3px dashed #ccc;
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    color: #666;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+/* Highlight state when dragging over */
+#drop-zone.hover {
+    border-color: #007bff;
+    background-color: #e9f5ff;
+    color: #007bff;
+}
+
+/* Container for the output log */
+#output {
+    margin-top: 2rem;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    min-height: 100px;
+}
