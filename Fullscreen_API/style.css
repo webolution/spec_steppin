@@ -1,0 +1,167 @@
+:root {
+    --bg: #0b1220;
+    --panel: #111a2e;
+    --text: #e8eefc;
+    --muted: #a9b5d6;
+    --accent: #3e8c60;
+    --danger: #ff5a67;
+    --border: rgba(255, 255, 255, 0.12);
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: radial-gradient(1200px 700px at 20% 10%, #16254a, var(--bg));
+    }
+
+    .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 28px 16px 40px;
+        display: grid;
+        gap: 16px;
+    }
+
+    header h1 {
+        margin: 0 0 6px; font-size: 22px;
+    }
+
+    header p {
+        margin: 0; color: var(--muted); line-height: 1.4;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+    }
+
+    @media (max-width: 860px) {
+        .row {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card {
+        background: color-mix(in srgb, var(--panel) 88%, transparent);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    /* This is the element we’ll toggle into fullscreen */
+    #stage {
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        overflow: hidden;
+        min-height: 320px;
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        /* Visually interesting, but simple (no external assets needed) */
+        background: radial-gradient(600px 240px at 30% 25%, rgba(62, 140, 96, 0.35), transparent),
+        radial-gradient(500px 260px at 80% 70%, rgba(120, 180, 255, 0.25), transparent),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    }
+
+    #stage .hint {
+        text-align: center;
+        padding: 18px;
+        max-width: 52ch;
+    }
+
+    #stage kbd {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        padding: 2px 8px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        margin-top: 12px;
+    }
+
+    button {
+        appearance: none;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px 12px;
+        font-weight: 650;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.06);
+        cursor: pointer;
+    }
+
+    button.primary {
+        background: color-mix(in srgb, var(--accent) 40%, rgba(255, 255, 255, 0.06));
+        border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+    }
+
+    button:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
+
+    .pill {
+        font-size: 12px;
+        color: var(--muted);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 6px 10px;
+        background: rgba(0, 0, 0, 0.18);
+    }
+
+    .status {
+        display: grid;
+        gap: 10px;
+    }
+
+    .status .line {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.14);
+        padding: 8px 0;
+    }
+
+    .status .label {
+        color: var(--muted);
+    }
+
+    .status .value {
+        font-weight: 650;
+    }
+
+    #log {
+        height: 190px;
+        overflow: auto;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        line-height: 1.35;
+        padding: 10px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.28);
+        white-space: pre-wrap;
+    }
+
+    .error {
+        color: color-mix(in srgb, var(--danger) 82%, white);
+        font-weight: 650;
+    }
+
+    /* Optional: show a visible outline while in fullscreen */
+    :fullscreen #stage {
+        outline: 6px solid rgba(62, 140, 96, 0.55);
+        outline-offset: -6px;
+        border-radius: 0;
+        /* many demos remove rounding in fullscreen */
+    }

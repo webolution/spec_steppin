@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="fullscreen_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Fullscreen API Demo</h1>
+            <p>
+                Click “Enter fullscreen” (or press <kbd>Enter</kbd>) to toggle fullscreen for the stage element.
+                The log will show <code>fullscreenchange</code> events and any errors.
+            </p>
+        </header>
+    
+        <div class="row">
+            <section class="card">
+                <!-- This is the element we request fullscreen on -->
+                <div id="stage" tabindex="0" aria-label="Fullscreen stage">
+                    <div class="hint">
+                        <div style="font-size: 18px; font-weight: 750; margin-bottom: 8px;">
+                            The Stage Element
+                        </div>
+                        <div style="color: var(--muted);">
+                            Try toggling fullscreen. Some browsers require a user gesture (click/keypress),     and some platforms (notably iOS) have limitations.
+                        </div>
+                        <div class="controls">
+                            <button id="toggleBtn" class="primary" type="button">Enter fullscreen</button>
+                            <button id="exitBtn" type="button">Exit fullscreen</button>
+                            <span class="pill" id="supportPill">Checking support…</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div style="margin-top: 12px; color: var(--muted); font-size: 13px;">
+                    We request fullscreen on a specific element, and the document tracks the current fullscreen element.”
+                </div>
+            </section>
+    
+            <aside class="card status">
+                <div class="line">
+                    <div class="label">document.fullscreenEnabled</div>
+                    <div class="value" id="enabledVal">—</div>
+                </div>
+                <div class="line">
+                    <div class="label">document.fullscreenElement</div>
+                    <div class="value" id="elementVal">—</div>
+                </div>
+                <div class="line">
+                    <div class="label">Last event</div>
+                    <div class="value" id="eventVal">—</div>
+                </div>
+    
+                <div>
+                    <div style="margin: 6px 0 8px; color: var(--muted); font-weight: 650;">Event log</div>
+                    <div id="log" aria-live="polite"></div>
+                    <div style="margin-top: 10px; display:flex; gap: 10px; flex-wrap: wrap;">
+                        <button id="clearLogBtn" type="button">Clear log</button>
+                        <span class="pill">Events: fullscreenchange, fullscreenerror</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
