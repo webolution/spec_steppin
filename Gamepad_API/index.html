@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamepad API Demo</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="gamepad_API.js" defer></script>
+</head>
+    
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Gamepad API Demo</h1>
+            <p>Use the buttons below to simulate connecting, disconnecting, or pressing a button on a virtual controller.
+            </p>
+        </header>
+    
+        <div class="row">
+            <section class="card">
+                <div id="stage" tabindex="0" aria-label="Gamepad stage">
+                    <div class="hint">
+                        <div style="font-size: 18px; font-weight: 750; margin-bottom: 8px;">
+                            Virtual Controller
+                        </div>
+                        <div style="color: var(--muted);">
+                            The Gamepad API requires polling to check button states, but relies on Window events to detect
+                            hardware changes.
+                        </div>
+                        <div class="controls" style="margin-top: 15px;">
+                            <button id="btnSimulateConnect" class="primary" type="button">🔌 Plug In</button>
+                            <button id="btnSimulateDisconnect" type="button">❌ Unplug</button>
+                            <button id="btnSimulatePress" type="button" disabled>🎮 Press "A" Button</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="card status">
+                <div class="line">
+                    <div class="label">Controller Status</div>
+                    <div class="value" id="statusVal">Waiting...</div>
+                </div>
+            
+                <div>
+                    <div style="margin: 6px 0 8px; color: var(--muted); font-weight: 650;">Event log</div>
+                    <div id="log" aria-live="polite"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
