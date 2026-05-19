@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+#status {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.coord {
+    color: #2c3e50;
+    font-family: monospace;
+}
